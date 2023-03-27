@@ -4,8 +4,7 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --output-public-path=/bundles/  --mode development --open --hot",
-    "build": "webpack --progress"
+    "start": "webpack-dev-server --output-public-path=/bundles/  --mode development --open --hot"
   },
   "keywords": [
   ],
