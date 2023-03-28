@@ -4,8 +4,8 @@
   "description": "",
   "main": "./src/index.js",
   "scripts": {
-    "start": "http-server",
-    "build": "webpack --progress"
+    "start": "http-server"
+    
   },
   "keywords": [],
   "author": "Doğukan Gazel",
