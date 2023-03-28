@@ -1,11 +1,13 @@
 import {Request}  from "./requests";
 import {UI} from "./ui";
 
+if(document){
+    const portfolioItems = document.getElementById("portfolio").firstElementChild.children[1];
+    const pageSlider = document.getElementById("slider").firstElementChild;
+    const navbar = document.getElementById("navbar");
+    const Body = document.getElementsByTagName("BODY")[0];
+}
 
-const portfolioItems = document.getElementById("portfolio").firstElementChild.children[1];
-const pageSlider = document.getElementById("slider").firstElementChild;
-const navbar = document.getElementById("navbar");
-const Body = document.getElementsByTagName("BODY")[0];
 
 const request = new Request("https://ucankaravan-api-production.up.railway.app/api/");
 const ui = new UI();
@@ -15,12 +17,27 @@ let albums;
 eventListener();
 
 function eventListener(){
-    document.addEventListener("DOMContentLoaded", getAllAlbums);
-    pageSlider.addEventListener("click", slidePage);
-    portfolioItems.addEventListener("click", clickItem);
-    navbar.addEventListener("click", clickLoginPage);
-    Body.addEventListener("click", loggedIn);
-    Body.addEventListener("click", posting);
+    if(document){
+        document.addEventListener("DOMContentLoaded", getAllAlbums);
+    }
+
+    if(pageSlider){
+        pageSlider.addEventListener("click", slidePage);
+        
+    }
+    if(portfolioItems){
+        
+        portfolioItems.addEventListener("click", clickItem);
+    }
+    if(navbar){
+        
+        navbar.addEventListener("click", clickLoginPage);
+    }
+    if(Body){
+        
+        Body.addEventListener("click", loggedIn);
+        Body.addEventListener("click", posting);
+    }
 
 }
 
